@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="grid-size">Resize Grid</label>
+      <input
+        type="range"
+        id="grid-size"
+        min="1"
+        max="100"
+        value="10"
+        step="1"
+      />
+      <span id="selected-grid-size"></span>
+    </form>
+    <div id="container"></div>
+  </body>
+</html>

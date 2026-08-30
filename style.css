@@ -1,0 +1,36 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 1px;
+    /* border: 1px solid; */
+    margin: auto;
+}
+.row {
+    /* flex: 0 1; */
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 1px;
+}
+.grid-div {
+    background-color: white;
+}
+form {
+    width: 500px;
+    margin: 15px auto;
+    text-align: center;
+}
+label, input, #selected-grid-size {
+    display: block
+}
+label {
+    font-size: x-large;
+}
+input {
+    width: 100%;
+}
