@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="./script.js" defer></script>
     <link rel="icon" href="./sketch-icon.png" type="image/png" />
     <title>Etch A Sketch</title>
   </head>
   <body>
     <form>
-      <label for="grid-size">Resize Grid</label>
+      <h2 class="quantico-regular">Etch A Sketch</h2>
+      <label for="grid-size" class="quantico-regular">Resize Grid</label>
       <input
         type="range"
         id="grid-size"
@@ -19,7 +26,7 @@
         value="10"
         step="1"
       />
-      <span id="selected-grid-size"></span>
+      <span id="selected-grid-size" class="quantico-bold"></span>
     </form>
     <div id="container"></div>
   </body>

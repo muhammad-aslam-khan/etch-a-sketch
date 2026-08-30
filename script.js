@@ -51,20 +51,19 @@ function recreateGrid(gridSize) {
             singleDiv.style.width = `${heightAndWidth}px`;
             // Only DIV with needs to be set, height is set from flex-basis of ROW
             
+            // Settings for 'color-change on-hover' effect
             let brownRGBA = '165, 42, 42';
             let opacity = 0.00;
             singleDiv.addEventListener('mouseenter', (e) => {
-            
-                opacity = opacity >= 1.00 ? 1.00 : opacity + 0.10;
+                opacity = opacity >= 1.00 ? 1.00 : opacity + 0.10; // Max opacity value 1.00
                 bgColor = `rgba(${brownRGBA}, ${opacity})`;
                 e.target.style.backgroundColor = bgColor;
-                console.log(bgColor)
             })
-
+            
+            // Append rowDiv along with its eventListener
             rowDiv.appendChild(singleDiv);
         }   
     }
-    console.log('working')
 }
 
 // Before creating new grid, we have to remove existing grid

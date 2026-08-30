@@ -1,17 +1,15 @@
 body {
     background-color: antiquewhite;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(111, 21, 21)
 }
 #container {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     gap: 1px;
-    /* border: 1px solid; */
     margin: auto;
 }
 .row {
-    /* flex: 0 1; */
     display: flex;
     flex-direction: row;
     justify-content: stretch;
@@ -21,7 +19,15 @@ body {
     background-color: white;
     transition: background-color 0.3s ease-in-out;
 }
-
+h2{
+    width: 100%;
+    margin: 15px 0px;
+    padding: 10px 0px;
+    border: 1px solid rgb(222, 128, 7);
+    border-radius: 15px;
+    color: rgb(254, 254, 254);
+    background-color: brown;
+}
 form {
     width: 500px;
     margin: 15px auto;
@@ -31,8 +37,34 @@ label, input, #selected-grid-size {
     display: block
 }
 label {
-    font-size: x-large;
+    font-size: large;
+    font-weight: 100;
 }
 input {
     width: 100%;
+}
+
+/* Fonts css classes, apply where necessary */
+.quantico-regular {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quantico-bold {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.quantico-regular-italic {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.quantico-bold-italic {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
