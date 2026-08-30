@@ -25,8 +25,8 @@ function displaySelectedGridSize(gridSize) {
 }
 
 // Main function called every time when there is a change in grid size. It further
-// calls two functions, first removeExistingGrid() to remove existing grid and second
-// recalculateCanvasSizes(gridSize) to get new values for ROW height and DIV width.
+// calls removeExistingGrid() function to remove existing grid and also recalculates
+// heightAndWidth values for ROW height and DIV width.
 function recreateGrid(gridSize) {
     removeExistingGrid();
 
