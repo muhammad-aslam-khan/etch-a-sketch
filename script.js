@@ -24,6 +24,7 @@ function displaySelectedGridSize(gridSize) {
     dispSelectedGridSize.textContent = `${gridSize} x ${gridSize}`;
 }
 
+
 // Main function called every time when there is a change in grid size. It further
 // calls removeExistingGrid() function to remove existing grid and also recalculates
 // heightAndWidth values for ROW height and DIV width.
@@ -49,10 +50,21 @@ function recreateGrid(gridSize) {
             singleDiv.classList.add('grid-div');
             singleDiv.style.width = `${heightAndWidth}px`;
             // Only DIV with needs to be set, height is set from flex-basis of ROW
+            
+            let brownRGBA = '165, 42, 42';
+            let opacity = 0.00;
+            singleDiv.addEventListener('mouseenter', (e) => {
+            
+                opacity = opacity >= 1.00 ? 1.00 : opacity + 0.10;
+                bgColor = `rgba(${brownRGBA}, ${opacity})`;
+                e.target.style.backgroundColor = bgColor;
+                console.log(bgColor)
+            })
 
             rowDiv.appendChild(singleDiv);
         }   
     }
+    console.log('working')
 }
 
 // Before creating new grid, we have to remove existing grid
