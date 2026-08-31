@@ -54,10 +54,12 @@ function recreateGrid(gridSize) {
             // Settings for 'color-change on-hover' effect
             let brownRGBA = '165, 42, 42';
             let opacity = 0.00;
-            singleDiv.addEventListener('mouseenter', (e) => {
-                opacity = opacity >= 1.00 ? 1.00 : opacity + 0.10; // Max opacity value 1.00
-                bgColor = `rgba(${brownRGBA}, ${opacity})`;
-                e.target.style.backgroundColor = bgColor;
+
+            // Even-listerner for desktop and mouse cursor hover like effect
+            singleDiv.addEventListener('mouseenter', (e) => colorchange(e, brownRGBA, opacity)); // This is the way to invoke call back functions when requied, if invoked directly it will trigger imediately.
+            
+            // Event-listener for mobile screen
+            singleDiv.addEventListener('touchstart', (e) => colorchange(e, brownRGBA, opacity));
             })
             
             // Append rowDiv along with its eventListener
@@ -65,6 +67,13 @@ function recreateGrid(gridSize) {
         }   
     }
 }
+
+// This function is attahced to each div for event-listerner action, as a callback function
+function colorChange(e, colorRGBA, opacity) {
+    opacity = opacity >= 1.00 ? 1.00 : opacity + 0.10; // Max opacity value 1.00
+    bgColor = `rgba(${colorRGBA}, ${opacity})`;
+    e.target.style.backgroundColor = bgColor;
+})
 
 // Before creating new grid, we have to remove existing grid
 function removeExistingGrid() {
