@@ -60,9 +60,8 @@ function recreateGrid(gridSize) {
             
             // Event-listener for mobile screen
             singleDiv.addEventListener('touchstart', (e) => colorchange(e, brownRGBA, opacity));
-            })
             
-            // Append rowDiv along with its eventListener
+            // Append rowDiv along with its eventListeners
             rowDiv.appendChild(singleDiv);
         }   
     }
